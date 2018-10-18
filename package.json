@@ -1,6 +1,6 @@
 {
   "name": "koa-api-username",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "API for generating random usernames.",
   "main": "index.js",
   "scripts": {
@@ -13,6 +13,9 @@
     "koa-json": "^2.0.2",
     "koa-router": "^7.4.0",
     "rword": "^2.3.0"
+  },
+  "engines": {
+    "node": "10.12.0"
   },
   "devDependencies": {}
 }

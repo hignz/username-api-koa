@@ -6,6 +6,8 @@ const rword = require('rword');
 const app = new Koa();
 const router = new KoaRouter();
 
+const port = process.env.PORT || 3000;
+
 app.use(json());
 
 router.get('/usernames/:id', (ctx) => {
@@ -19,4 +21,4 @@ router.get('/usernames/:id', (ctx) => {
 
 app.use(router.routes()).use(router.allowedMethods());
 
-app.listen(3000, () => console.log('Server Started...'));
+app.listen(port, () => console.log(`Server Started on port ${port}`));
