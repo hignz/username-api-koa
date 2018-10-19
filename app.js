@@ -5,10 +5,13 @@ const rword = require('rword');
 
 const app = new Koa();
 const router = new KoaRouter();
+const cors = require('@koa/cors');
 
 const port = process.env.PORT || 3000;
 
-app.use(json());
+app
+  .use(json())
+  .use(cors());
 
 router.get('/usernames/:id', (ctx) => {
   ctx.body = {
